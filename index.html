@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aventura da Matemática da Elisa – 3º Ano B</title>
+  <title>Revisão Matemática – 3º Ano B – Profª Jhennifer</title>
   <style>
     :root {
       --bg: #f0f7ff;
@@ -74,17 +74,19 @@
       font-size: 26px;
       font-weight: bold;
       box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      flex-shrink: 0;
     }
 
     .brand-title h1 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #1e3a8a;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
     .brand-title p {
       font-size: 0.85rem;
       color: var(--muted);
+      margin-top: 2px;
     }
 
     .stats {
@@ -138,23 +140,100 @@
       border-radius: 24px;
       padding: 28px;
       box-shadow: var(--shadow);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       text-align: center;
       border: 2px solid #e0e7ff;
     }
 
     .hero h2 {
-      font-size: 1.65rem;
+      font-size: 1.55rem;
       color: #1e3a8a;
       margin-bottom: 8px;
     }
 
     .hero p {
       color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 20px;
+      max-width: 640px;
+      margin: 0 auto 18px;
       font-size: 1rem;
       line-height: 1.5;
+    }
+
+    /* Student Name Box */
+    .name-box {
+      background: #f8fafc;
+      border: 2px solid #dbeafe;
+      border-radius: 18px;
+      padding: 16px;
+      max-width: 560px;
+      margin: 0 auto 20px;
+    }
+
+    .name-box label {
+      display: block;
+      font-weight: 700;
+      color: #1e3a8a;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .name-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .name-input {
+      flex: 1;
+      min-width: 210px;
+      padding: 10px 14px;
+      border: 2px solid #cbd5e1;
+      border-radius: 12px;
+      font-size: 1rem;
+      color: var(--text);
+      outline: none;
+    }
+
+    .name-input:focus {
+      border-color: var(--primary);
+    }
+
+    .btn-save-name {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    .btn-save-name:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-direct {
+      background: #e2e8f0;
+      color: #334155;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-direct:hover {
+      background: #cbd5e1;
+    }
+
+    .name-status {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: #475569;
+      font-weight: 600;
     }
 
     .btn-super {
@@ -163,19 +242,84 @@
       border: none;
       border-radius: 16px;
       padding: 14px 28px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-weight: 800;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
       transition: transform 0.15s, box-shadow 0.15s;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
     }
 
     .btn-super:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 24px rgba(234, 88, 12, 0.38);
+    }
+
+    /* WhatsApp Upsell Cards */
+    .upsell-banner {
+      background: #f0fdf4;
+      border: 2px solid #86efac;
+      border-radius: 22px;
+      padding: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.1);
+    }
+
+    .upsell-banner.cert-upsell {
+      margin-top: 22px;
+      margin-bottom: 0;
+    }
+
+    .upsell-banner h3 {
+      color: #166534;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .upsell-banner p {
+      color: #14532d;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      max-width: 660px;
+      margin: 0 auto 14px;
+    }
+
+    .wpp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-wpp {
+      background: #16a34a;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.15s, background 0.15s;
+    }
+
+    .btn-wpp:hover {
+      background: #15803d;
+      transform: translateY(-1px);
+    }
+
+    .btn-wpp.secondary-wpp {
+      background: #0f766e;
+    }
+
+    .btn-wpp.secondary-wpp:hover {
+      background: #115e59;
     }
 
     /* Missions Grid */
@@ -508,7 +652,7 @@
     }
 
     .certificate .student-name {
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       font-weight: 900;
       color: #1e3a8a;
       margin: 8px 0;
@@ -568,7 +712,7 @@
       <div class="brand">
         <div class="brand-icon">🚀</div>
         <div class="brand-title">
-          <h1>Aventura da Matemática da Elisa</h1>
+          <h1 id="headerTitle">Revisão Matemática – 3º Ano B – Profª Jhennifer</h1>
           <p>3º Ano B • Colégio Municipal Dr. Astério Alves de Mendonça</p>
         </div>
       </div>
@@ -581,11 +725,48 @@
     <!-- HOME SCREEN -->
     <main id="homeScreen" class="screen active">
       <section class="hero">
-        <h2>Olá, Elisa! Pronta para brilhar na prova? 🌟</h2>
-        <p>Escolha uma missão abaixo para treinar os conteúdos da Profª Jennifer ou encare o <strong>Super Simulado do 3º Trimestre</strong> para ganhar seu Certificado!</p>
+        <h2 id="heroGreeting">Pronto para brilhar na prova? 🌟</h2>
+        <p>Digite o nome do aluno abaixo para personalizar o simulado e o certificado — ou entre direto na <strong>Revisão Matemática – 3º Ano B – Profª Jhennifer</strong>!</p>
+
+        <div class="name-box">
+          <label for="studentNameInput">✏️ Nome do aluno (opcional):</label>
+          <div class="name-controls">
+            <input
+              type="text"
+              id="studentNameInput"
+              class="name-input"
+              placeholder="Ex.: Lucas, Ana, Sofia..."
+              maxlength="45"
+            />
+            <button type="button" class="btn-save-name" onclick="saveStudentName()">Salvar Nome</button>
+            <button type="button" class="btn-direct" onclick="useDefaultTitle()">Entrar direto</button>
+          </div>
+          <div class="name-status" id="nameStatus">Modo atual: Revisão Matemática – 3º Ano B – Profª Jhennifer</div>
+        </div>
+
         <button class="btn-super" onclick="startQuiz('simulado')">
           🏆 Iniciar Super Simulado Completo (15 questões)
         </button>
+      </section>
+
+      <!-- Upsell Banner on Start Screen -->
+      <section class="upsell-banner" aria-label="Outras revisões disponíveis">
+        <h3>📚 Quer a revisão? Precisa de outras revisões para as provas?</h3>
+        <p>Temos materiais e revisões de <strong>Português</strong>, <strong>Ciências</strong> e <strong>Geografia</strong>. Clique na matéria desejada para falar direto comigo no WhatsApp:</p>
+        <div class="wpp-buttons">
+          <a class="btn-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20inicial%20da%20revis%C3%A3o%20e%20quero%20saber%20sobre%20a%20revis%C3%A3o%20de%20Portugu%C3%AAs.">
+            💬 Português
+          </a>
+          <a class="btn-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20inicial%20da%20revis%C3%A3o%20e%20quero%20saber%20sobre%20a%20revis%C3%A3o%20de%20Ci%C3%AAncias.">
+            💬 Ciências
+          </a>
+          <a class="btn-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20inicial%20da%20revis%C3%A3o%20e%20quero%20saber%20sobre%20a%20revis%C3%A3o%20de%20Geografia.">
+            💬 Geografia
+          </a>
+          <a class="btn-wpp secondary-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20inicial%20e%20tenho%20interesse%20nas%20outras%20revis%C3%B5es%20%28Portugu%C3%AAs%2C%20Ci%C3%AAncias%20e%20Geografia%29.">
+            📲 Todas as matérias
+          </a>
+        </div>
       </section>
 
       <section class="missions-grid" id="missionsGrid"></section>
@@ -609,7 +790,7 @@
         <div class="options-grid" id="optionsGrid"></div>
 
         <div class="hint-bar">
-          <button class="btn-hint" id="hintBtn" onclick="toggleHint()">💡 Dica da Profª Jennifer</button>
+          <button class="btn-hint" id="hintBtn" onclick="toggleHint()">💡 Dica da Profª Jhennifer</button>
         </div>
         <div class="hint-box" id="hintBox"></div>
 
@@ -628,7 +809,7 @@
         <div class="certificate">
           <h3>🏅 CERTIFICADO DE DEDICAÇÃO 🏅</h3>
           <p style="font-size: 0.9rem; color: #78350f;">Concedido com muito orgulho para</p>
-          <div class="student-name">Elisa</div>
+          <div class="student-name" id="certificateName">Revisão Matemática – 3º Ano B – Profª Jhennifer</div>
           <p style="font-size: 0.92rem; color: #78350f;">
             Por mandar super bem nos estudos de Matemática do <strong>3º Ano B</strong>!
           </p>
@@ -642,11 +823,33 @@
             🏠 Voltar para as Missões
           </button>
         </div>
+
+        <!-- Upsell Banner on Certificate Screen -->
+        <div class="upsell-banner cert-upsell">
+          <h3>🎯 Precisa das outras revisões para as provas? Clique aqui!</h3>
+          <p>Garanta também as revisões de <strong>Português</strong>, <strong>Ciências</strong> e <strong>Geografia</strong>. Fale direto comigo no WhatsApp:</p>
+          <div class="wpp-buttons">
+            <a class="btn-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Cheguei%20pela%20tela%20do%20certificado%20e%20quero%20saber%20sobre%20a%20revis%C3%A3o%20de%20Portugu%C3%AAs.">
+              💬 Português
+            </a>
+            <a class="btn-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Cheguei%20pela%20tela%20do%20certificado%20e%20quero%20saber%20sobre%20a%20revis%C3%A3o%20de%20Ci%C3%AAncias.">
+              💬 Ciências
+            </a>
+            <a class="btn-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Cheguei%20pela%20tela%20do%20certificado%20e%20quero%20saber%20sobre%20a%20revis%C3%A3o%20de%20Geografia.">
+              💬 Geografia
+            </a>
+            <a class="btn-wpp secondary-wpp" target="_blank" rel="noopener noreferrer" href="https://wa.me/5521995930308?text=Ol%C3%A1%21%20Vi%20no%20certificado%20e%20quero%20inform%C3%A7%C3%B5es%20sobre%20as%20outras%20revis%C3%B5es%20%28Portugu%C3%AAs%2C%20Ci%C3%AAncias%20e%20Geografia%29.">
+              📲 Falar no WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 
   <script>
+    const DEFAULT_LABEL = 'Revisão Matemática – 3º Ano B – Profª Jhennifer';
+
     // Sound effects using Web Audio API (no external files needed)
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     function playTone(type) {
@@ -1016,6 +1219,7 @@
     ];
 
     // State
+    let studentName = (localStorage.getItem('aluno_nome') || '').trim();
     let stars = Number(localStorage.getItem('elisa_stars') || 0);
     let streak = 0;
     let completedMissions = JSON.parse(localStorage.getItem('elisa_done') || '{}');
@@ -1029,12 +1233,64 @@
 
     const letters = ['A', 'B', 'C', 'D'];
 
+    function getDisplayTitle() {
+      return studentName ? `Revisão Matemática – ${studentName} (3º Ano B)` : DEFAULT_LABEL;
+    }
+
+    function getShortGreetingName() {
+      return studentName || 'estudante do 3º Ano B';
+    }
+
+    function applyStudentLabels() {
+      const displayTitle = getDisplayTitle();
+      document.title = displayTitle;
+      document.getElementById('headerTitle').textContent = displayTitle;
+
+      const inputEl = document.getElementById('studentNameInput');
+      if (inputEl && document.activeElement !== inputEl) {
+        inputEl.value = studentName;
+      }
+
+      const greetingEl = document.getElementById('heroGreeting');
+      if (studentName) {
+        greetingEl.textContent = `Olá, ${studentName}! Pronto para brilhar na prova? 🌟`;
+      } else {
+        greetingEl.textContent = 'Pronto para brilhar na prova? 🌟';
+      }
+
+      const statusEl = document.getElementById('nameStatus');
+      if (studentName) {
+        statusEl.textContent = `Aluno selecionado: ${studentName} • 3º Ano B (Profª Jhennifer)`;
+      } else {
+        statusEl.textContent = `Modo atual: ${DEFAULT_LABEL}`;
+      }
+
+      const certNameEl = document.getElementById('certificateName');
+      if (certNameEl) {
+        certNameEl.textContent = studentName || DEFAULT_LABEL;
+      }
+    }
+
+    function saveStudentName() {
+      const inputEl = document.getElementById('studentNameInput');
+      studentName = (inputEl.value || '').trim();
+      localStorage.setItem('aluno_nome', studentName);
+      applyStudentLabels();
+    }
+
+    function useDefaultTitle() {
+      studentName = '';
+      localStorage.removeItem('aluno_nome');
+      applyStudentLabels();
+    }
+
     function updateStatsUI() {
       document.getElementById('starCount').textContent = stars;
       document.getElementById('streakCount').textContent = streak;
     }
 
     function renderHome() {
+      applyStudentLabels();
       updateStatsUI();
       const grid = document.getElementById('missionsGrid');
       grid.innerHTML = '';
@@ -1092,7 +1348,6 @@
       if (customQuestions) {
         currentList = customQuestions;
       } else if (missionId === 'simulado') {
-        // Pick 3 from each of the 5 missions = 15 questions
         let sim = [];
         MISSIONS.forEach(m => {
           const pool = shuffle(QUESTIONS.filter(q => q.mission === m.id));
@@ -1160,6 +1415,7 @@
       buttons.forEach(b => (b.disabled = true));
 
       const fb = document.getElementById('feedbackBox');
+      const shortName = getShortGreetingName();
 
       if (selectedIdx === q.answer) {
         btnEl.classList.add('correct');
@@ -1169,7 +1425,7 @@
         scoreInSession += 1;
         localStorage.setItem('elisa_stars', stars);
         fb.className = 'feedback-box ok';
-        fb.innerHTML = `<strong>⭐ Muito bem, Elisa! (+10 estrelas)</strong><br>${q.explanation}`;
+        fb.innerHTML = `<strong>⭐ Muito bem, ${shortName}! (+10 estrelas)</strong><br>${q.explanation}`;
       } else {
         btnEl.classList.add('wrong');
         buttons[q.answer].classList.add('correct');
@@ -1197,7 +1453,10 @@
     }
 
     function finishQuiz() {
+      applyStudentLabels();
       const total = currentList.length;
+      const shortName = getShortGreetingName();
+
       if (scoreInSession === total && currentMissionId && currentMissionId !== 'retry') {
         completedMissions[currentMissionId] = true;
         localStorage.setItem('elisa_done', JSON.stringify(completedMissions));
@@ -1205,7 +1464,7 @@
 
       document.getElementById('resultEmoji').textContent = scoreInSession === total ? '🏆' : '🌟';
       document.getElementById('resultTitle').textContent =
-        scoreInSession === total ? 'Pontuação Perfeita, Elisa!' : 'Parabéns pelo Esforço, Elisa!';
+        scoreInSession === total ? `Pontuação Perfeita, ${shortName}!` : `Parabéns pelo Esforço, ${shortName}!`;
       document.getElementById('resultSummary').textContent =
         `Você acertou ${scoreInSession} de ${total} questões e já acumulou ${stars} estrelas!`;
 
